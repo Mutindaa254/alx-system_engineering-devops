@@ -1,0 +1,1 @@
+This project is about: Shell I/O Redirections, standard input and output redirections, Special characters, how to concatenate files and print on the standard output, to reverse a string, to remove sections from each line of files, what the /etc/passwd and /etc/shadow files do.
