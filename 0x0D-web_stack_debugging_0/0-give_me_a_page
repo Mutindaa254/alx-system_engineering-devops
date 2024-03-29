@@ -1,15 +1,14 @@
 
-# Start Apache
-systemctl start apache2
+#!/usr/bin/env bash
+# Start Apache so as to return a
+service apache2 start
+
+# Set up Apache server
+# IP="$(curl ifconfig.me)"
 
 # Set ServerName to IP
-# IP="$(curl ifconfig.me)"
-# sed -i "s/#ServerName www.example.com/ServerName $IP/" /etc/apache2/sites-available/000-default.conf
+# sudo sed -i "s/#ServerName www.example.com/ServerName $IP/" /etc/apache2/sites-available/000-default.conf
 
-# Check if Apache started successfully
-if systemctl is-active --quiet apache2; then
-    echo "Apache started successfully."
-else
-    echo "Failed to start Apache."
-    exit 1
-fi
+# Start Apache
+sudo service apache2 start
+
