@@ -2,7 +2,6 @@
  * File: 102-zombie.c
  * Auth: Brennan D Baraban
  */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
