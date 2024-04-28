@@ -25,5 +25,4 @@ Develop automated tests to validate load balancer configurations and ensure prop
 Implement a change management process to carefully review and approve any modifications to critical network infrastructure.
 By implementing these measures, we aim to prevent similar incidents from occurring in the future and ensure the reliability and availability of our services to users.
 
-
 This postmortem report serves as a learning opportunity for our team to improve our incident response processes and strengthen our infrastructure's resilience to potential issues.
