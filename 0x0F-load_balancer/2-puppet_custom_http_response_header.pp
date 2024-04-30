@@ -1,4 +1,3 @@
-
 #Add a custom HTTP header with Puppet
 #server configuration using puppet
 
