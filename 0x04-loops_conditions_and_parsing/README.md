@@ -1,1 +1,1 @@
-This project is about: Loops, conditions and parsing, using #!/usr/bin/env bash over #!/bin/bash, while, until and for loops, if, else, elif and case condition statements, cut command, files and other comparison operators, and how to use them
+This project is about; Loops, conditions and parsing, using #!/usr/bin/env bash over #!/bin/bash, while, until and for loops, if, else, elif and case condition statements, cut command, files and other comparison operators, and how to use them

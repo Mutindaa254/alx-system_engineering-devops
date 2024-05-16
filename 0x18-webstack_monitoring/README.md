@@ -1,1 +1,2 @@
-This project is about: Webstack monitoring
+This project is about:
+1. Webstack monitoring

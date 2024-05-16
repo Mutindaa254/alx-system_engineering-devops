@@ -1,41 +1,28 @@
-This project is about:
-## Postmortem : Outage on Dec 1, 2022
-##
-> On Dec 1, 2023, users experienced slow response times while accessing our application platform. Approximately 30% of our users were affected.
+Postmortem: Service Outage on Nairobi Data Center
+Issue Summary
+Duration: March 25, 2024, 09:00 AM EAT to March 25, 2024, 11:30 AM EAT
+Impact: The web application hosted on the Nairobi data center experienced a complete outage, affecting all users accessing the service. Approximately 95% of users were unable to access the application during the outage.
+Root Cause: The outage was caused by a misconfiguration in the load balancer settings, leading to improper routing of incoming traffic to the application servers.
+Timeline
+09:00 AM EAT: Issue detected when monitoring alerts indicated a sudden drop in server response times.
+09:05 AM EAT: Engineering team notified of the outage.
+09:10 AM EAT: Initial investigation focused on the application servers, assuming a potential issue with the application code or server infrastructure.
+09:30 AM EAT: Network team joined the investigation, suspecting a network-related issue due to the widespread impact.
+10:00 AM EAT: Load balancer configuration was identified as a potential cause after reviewing network traffic logs.
+10:30 AM EAT: Misleading paths of investigation, including DNS issues and database connectivity, were ruled out.
+11:00 AM EAT: Incident escalated to senior network engineers for further analysis and resolution.
+11:30 AM EAT: Load balancer misconfiguration rectified, restoring normal traffic flow to application servers.
+Root Cause and Resolution
+Root Cause: The misconfiguration in the load balancer settings resulted in incorrect routing of incoming requests, preventing users from accessing the application servers.
+Resolution: The load balancer configuration was updated to ensure proper routing of traffic to the application servers. Specifically, the misconfigured routing rules were corrected to direct incoming requests to the appropriate backend servers.
+Corrective and Preventative Measures
+Improvements/Fixes:
+Implement regular audits of load balancer configurations to identify and rectify any misconfigurations.
+Enhance monitoring and alerting systems to provide early detection of similar issues in the future.
+Tasks to Address the Issue:
+Conduct a comprehensive review of all load balancer configurations across data centers.
+Develop automated tests to validate load balancer configurations and ensure proper routing of traffic.
+Implement a change management process to carefully review and approve any modifications to critical network infrastructure.
+By implementing these measures, we aim to prevent similar incidents from occurring in the future and ensure the reliability and availability of our services to users.
 
-- Timeline:
-> 12:00 PM: The issue was detected by our monitoring system, which alerted the engineering team.
-
->12:10 PM: The team investigated the issue and found that the database was experiencing high CPU usage.
-
->12:30 PM: The team assumed that a recent code deployment was the root cause and rolled back the deployment.
-
->1:00 PM: The team discovered that the rollback did not fix the issue and continued investigating.
-
->2:00 PM: The team realized that the high CPU usage was caused by a spike in traffic from a third-party service that was integrated into our platform.
-
->2:30 PM: The team contacted the third-party service and requested they limit their traffic to our platform.
-
->3:00 PM: The third-party service limited their traffic and the issue was resolved.
-
->4:00 PM: The team confirmed that the issue was resolved and closed the incident.
-
-
-- Root Cause and Resolution:
-> The root cause of the issue was a spike in traffic from a third-party service that was integrated into our platform. This caused the database to experience high CPU usage, resulting in slow response times for our users. The issue was resolved by contacting the third-party service and requesting they limit their traffic to our platform.
-
-- Corrective and Preventative Measures:
->To prevent similar incidents in the future, we will implement the following measures:
-1. Improve our monitoring system to provide more granular insights into system performance.
-2. Implement automatic scaling for our database to handle spikes in traffic.
-3. Review and update our third-party service integration policies to ensure they are compliant with our system requirements.
-4. Establish better communication channels with third-party services to quickly address any issues that may arise.
-5. Train engineering teams to investigate and identify issues more efficiently.
-
-- Tasks:
-
-1. Implement automatic scaling for our database.
-2. Review and update our third-party service integration policies.
-3. Schedule regular meetings with third-party services to discuss integration performance.
-4. Improve documentation on our incident response process and train engineering teams on how to follow it.
-5. Improve monitoring systems to provide more granular insights into system performance.
+This postmortem report serves as a learning opportunity for our team to improve our incident response processes and strengthen our infrastructure's resilience to potential issues.
