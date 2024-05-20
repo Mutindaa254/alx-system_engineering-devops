@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 #script to fix the server Nginx
 
 pkill -9 apache2
