@@ -1,5 +1,5 @@
-
 # Setting up ssh config file using puppet
+
 file_line {'ssh_config_first_work':
   ensure   => present,
   path     => '/etc/ssh/ssh_config',
