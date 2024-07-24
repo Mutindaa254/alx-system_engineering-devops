@@ -1,5 +1,6 @@
 #Add a custom HTTP header with Puppet
 #server configuration using puppet
+
 exec { 'apt-update':
   command => '/usr/bin/apt update',
 }
